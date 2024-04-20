@@ -11,26 +11,109 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Results"
+        android:text="When should I take the test..."
         android:gravity="center"
         android:fontFamily="@font/quattrocentobold"
         android:textSize="@dimen/title_1"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+        app:layout_constraintTop_toTopOf="@id/guideline_top"
+        />
 
     <TextView
         android:id="@+id/results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Results"
+        android:text="As soon \nas possible"
         android:gravity="center"
         android:fontFamily="@font/mulish_wght"
         android:textSize="@dimen/title_2"
-        app:layout_constraintEnd_toEndOf="@id/guideline_right"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/middle"
+        />
+
+
+    <TextView
+        android:id="@+id/results_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For best \naccuracy"
+        android:gravity="center"
+        android:fontFamily="@font/mulish_wght"
+        android:textSize="@dimen/title_2"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintLeft_toRightOf="@id/middle"
+
+
+        />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/accurate"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/results"
         app:layout_constraintBottom_toTopOf="@id/home"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintLeft_toRightOf="@id/middle"
+        >
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/app_name"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/soon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/results"
+        app:layout_constraintBottom_toTopOf="@id/home"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/middle"
+        >
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/app_name"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+
+    </androidx.cardview.widget.CardView>
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -54,6 +137,14 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50"/>
+
+
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -61,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9"/>
+        app:layout_constraintGuide_percent="0.8"/>
 
 
 
@@ -79,7 +170,7 @@
 
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/soon"
         app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
 
 

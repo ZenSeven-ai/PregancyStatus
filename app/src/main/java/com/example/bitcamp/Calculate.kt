@@ -1,8 +1,14 @@
 package com.example.bitcamp
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
-import android.util.Log
+import android.text.Html
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.style.AbsoluteSizeSpan
+import android.text.style.StyleSpan
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -93,20 +99,23 @@ class Calculate: AppCompatActivity() {
 
             var text:String = ""
 
-            Log.w("here", "twennty one $twentyone_day_string")
 
 
             if(twentyone_day.before(curr_date)){
                 // before todays date
-                text = "You can take the test as soon as today $curr_date_string for best accuracy!"
+
+
+                text = "You can take the test as soon as \ntoday $curr_date_string for the best accuracy!"
+
 
             } else {
                 // not before todays date
-                text = "You can take the test on $twentyone_day_string, for " +
-                        "the best accuracy."
+                text = "You can take the test on \n $twentyone_day_string, for the best accuracy."
+
+
+
 
             }
-
 
             tv.text = text
 

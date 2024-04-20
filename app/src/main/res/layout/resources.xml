@@ -38,12 +38,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7"/>
+        app:layout_constraintGuide_percent="0.8"/>
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="360dp"
-        android:layout_height="160dp"
+        android:layout_width="380dp"
+        android:layout_height="180dp"
         android:src="@drawable/fulllengthlogo"
         app:layout_constraintTop_toBottomOf="@id/guideline_top"
         app:layout_constraintBottom_toTopOf="@id/education"
@@ -54,12 +54,12 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/education"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/mulishbold"
         android:text="Learn About Different Contraceptive Methods"
         android:textColor="@color/dark_purple"
-        android:textSize="@dimen/title_2"
+        android:textSize="@dimen/title_3"
 
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
@@ -69,12 +69,12 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/map"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/mulishbold"
         android:text="Find Sexual Health Resources Near You"
         android:textColor="@color/dark_purple"
-        android:textSize="@dimen/title_2"
+        android:textSize="@dimen/title_3"
 
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"

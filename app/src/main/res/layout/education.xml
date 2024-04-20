@@ -135,8 +135,7 @@
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="Long-acting, reversible contraception.
-    \nPerfect use: 98% effective\n  Normal Use: 87% effective"
+        android:text="Long-acting, reversible, hormonal contraception placed inside the uterus.\nPerfect use: 99% effective\n  Normal Use: 99% effective"
         android:textSize="18dp"
         android:textColor="@color/white"
         android:fontFamily="@font/mulishbold"
@@ -155,7 +154,6 @@
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:visibility="invisible"
         android:text="IUD"
         android:textSize="22sp"
         android:fontFamily="@font/mulishbold"
@@ -173,9 +171,10 @@
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="Back Card"
-        android:textSize="22sp"
+        android:text="Tiny rod placed in arm that releases hormones to prevent pregnancy.\nPerfect use: 99% effective\n  Normal Use: 99% effective"
+        android:textSize="18dp"
         android:fontFamily="@font/mulishbold"
+        android:textColor="@color/white"
         android:background="@drawable/custom_button_selected"
         app:layout_constraintTop_toBottomOf="@id/card_front_3"
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
@@ -191,6 +190,7 @@
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
+
         android:text="Withdrawal"
         android:textSize="22sp"
         android:fontFamily="@font/mulishbold"
@@ -210,6 +210,7 @@
         android:text="Go Back Home"
         android:textColor="@color/white"
         android:textSize="20dp"
+
 
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"

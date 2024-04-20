@@ -2,6 +2,7 @@ package com.example.bitcamp
 
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,6 +12,7 @@ class Education : AppCompatActivity() {
 
     lateinit var front_anim:AnimatorSet
     lateinit var back_anim: AnimatorSet
+    lateinit var home:Button
     var isFront1 =true
     var isFront2 =true
     var isFront3 =true
@@ -20,6 +22,8 @@ class Education : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.education)
+
+        home = findViewById(R.id.home)
 
         // we now need to modify the camera scale
         var scale = applicationContext.resources.displayMetrics.density
@@ -45,6 +49,13 @@ class Education : AppCompatActivity() {
         front_anim = AnimatorInflater.loadAnimator(applicationContext, R.animator.front_animator) as AnimatorSet
         back_anim = AnimatorInflater.loadAnimator(applicationContext, R.animator.back_animator) as AnimatorSet
 
+        home.setOnClickListener {
+            var intent: Intent = Intent(this, MainActivity::class.java)
+            this.startActivity(intent)
+
+
+
+        }
 
 
 
