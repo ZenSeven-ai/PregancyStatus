@@ -5,26 +5,33 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class MissedPeriod : AppCompatActivity() {
+class KnowPeriod:AppCompatActivity() {
 
-    private lateinit var yes:Button
-    private lateinit var no:Button
+    private lateinit var yes: Button
+    private lateinit var no: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.missed_period)
+        setContentView(R.layout.know_period)
 
         yes = findViewById(R.id.yes)
         no = findViewById(R.id.no)
 
+        yes.setOnClickListener {
+
+            var intent: Intent = Intent(this, NotMissPeriod::class.java)
+            this.startActivity(intent)
+
+        }
+
+
         no.setOnClickListener {
 
-            var intent: Intent = Intent(this, KnowPeriod::class.java)
+            var intent = Intent(this, DontKnowPeriod::class.java)
             this.startActivity(intent)
         }
 
-        yes.setOnClickListener {
-            var intent: Intent = Intent(this, DayMissed::class.java)
-            this.startActivity(intent)
-        }
+
+
     }
 }

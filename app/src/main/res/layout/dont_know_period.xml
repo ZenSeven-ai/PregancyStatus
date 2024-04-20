@@ -11,9 +11,10 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Am I Pregnant?"
+        android:text="Select when you last had unprotected sex"
+        android:gravity="center"
         android:fontFamily="@font/quattrocentobold"
-        android:textSize="45dp"
+        android:textSize="@dimen/title_1"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/guideline_top" />
@@ -37,91 +38,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.3"/>
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_half"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9"/>
+        app:layout_constraintGuide_percent="0.7"/>
 
 
-    <TextView
-        android:id="@+id/body_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you worried that you may be \n pregnant and don't know when to \n take the pregnancy test?"
-        android:fontFamily="@font/mulishregular"
-        android:textSize="@dimen/title_3"
-        android:gravity="center"
-        app:layout_constraintLeft_toRightOf="@id/guideline_left"
-        app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/title" />
 
-    <TextView
-        android:id="@+id/body_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Use this tool to find out when \nto get the most accurate results!"
-        android:fontFamily="@font/mulishregular"
-        android:textSize="@dimen/title_3"
-        android:gravity="center"
-        app:layout_constraintLeft_toRightOf="@id/guideline_left"
-        app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/body_1"
-        app:layout_constraintBottom_toTopOf="@id/guideline_half"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/when"
+        android:id="@+id/select_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/mulishbold"
-        android:text="Find Out When"
+        android:text="Click Here to Select Date"
         android:textColor="@color/dark_purple"
         android:textSize="@dimen/body"
 
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/body_2"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
 
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/resources"
+        android:id="@+id/calculate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/mulishbold"
-        android:text="Resources"
+        android:text="Calculate Your Results"
         android:textColor="@color/dark_purple"
         android:textSize="@dimen/body"
 
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/when"
+        app:layout_constraintTop_toBottomOf="@id/select_date"
         app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/mulishregular"
-        android:text="If you are unsure of any medical related conditions \nPLEASE see a Healthcare Professional"
-        android:gravity="center"
-
-        app:layout_constraintTop_toBottomOf="@id/guideline_bottom"
-        app:layout_constraintLeft_toRightOf="@id/guideline_left"
-        app:layout_constraintRight_toLeftOf="@id/guideline_right"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

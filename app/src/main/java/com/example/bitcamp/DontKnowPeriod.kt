@@ -5,20 +5,20 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.CalendarView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Calendar
 
-class DayMissed : AppCompatActivity() {
-    private lateinit var date:Button
+class DontKnowPeriod:AppCompatActivity() {
+
+    private lateinit var date: Button
     private lateinit var calculate: Button
     private var day_choose:Int = 0
     private var month_choose:Int = 0
     private var year_choose:Int = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.day_missed)
+        setContentView(R.layout.dont_know_period)
+
         date = findViewById(R.id.select_date)
         calculate = findViewById(R.id.calculate)
 
@@ -35,7 +35,6 @@ class DayMissed : AppCompatActivity() {
             val maxYear = year
 
 
-
             val datePickerDialog = DatePickerDialog(
                 this,{ view, year, month, day ->
                     day_choose = day
@@ -50,10 +49,7 @@ class DayMissed : AppCompatActivity() {
                 day
             )
 
-
             datePickerDialog.show()
-
-            // set the max date as the current day
             c.set(maxYear, maxMonth-1, maxDay)
             datePickerDialog.datePicker.maxDate = c.timeInMillis
 
@@ -70,7 +66,7 @@ class DayMissed : AppCompatActivity() {
                 intent.putExtra("Year", year_choose)
                 intent.putExtra("Day", day_choose)
 
-                intent.putExtra("Situation", "MissedPeriod")
+                intent.putExtra("Situation", "DontKnowPeriod")
                 this.startActivity(intent)
 
             }
@@ -78,6 +74,7 @@ class DayMissed : AppCompatActivity() {
 
 
         }
+
 
 
     }

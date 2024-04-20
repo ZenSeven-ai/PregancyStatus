@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:gravity="center"
+        android:fontFamily="@font/quattrocentobold"
+        android:textSize="@dimen/title_1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For the best accuracy you should \n wait until you have officially \nmissed your period to take a \npregnancy test."
+
+        android:gravity="center"
+        android:fontFamily="@font/mulish_wght"
+        android:textSize="@dimen/title_2"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintBottom_toTopOf="@id/results_2"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/results_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n\nTaking it early in your cycle may \nresult to inaccurate results"
+        android:gravity="center"
+        android:fontFamily="@font/mulish_wght"
+        android:textSize="@dimen/title_2"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintBottom_toTopOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@id/results" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"/>
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/mulishbold"
+        android:text="Go to Home Page"
+        android:textColor="@color/dark_purple"
+        android:textSize="@dimen/body"
+
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/results_2"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

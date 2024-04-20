@@ -29,7 +29,6 @@ class Calculate: AppCompatActivity() {
             this.startActivity(intent)
         }
 
-
         day_choose = intent.getIntExtra("Day", 0)
         month_choose = intent.getIntExtra("Month", 0)
         year_choose = intent.getIntExtra("Year", 0)
@@ -40,45 +39,71 @@ class Calculate: AppCompatActivity() {
         calendar.set(Calendar.MONTH, month_choose)
         calendar.set(Calendar.YEAR, year_choose)
 
-
         val monthdate = SimpleDateFormat("MMM dd, yyyy")
         var curr_date_string:String = monthdate.format(curr_date.getTime())
 
-        calendar.add(Calendar.DAY_OF_WEEK, 1)
-        var first_day:Calendar = calendar.clone() as Calendar
-        var first_day_string:String = monthdate.format(first_day.getTime())
+        if(intent.getStringExtra("Situation").equals("MissedPeriod")){
+
+
+            calendar.add(Calendar.DAY_OF_WEEK, 1)
+            var first_day:Calendar = calendar.clone() as Calendar
+            var first_day_string:String = monthdate.format(first_day.getTime())
 
 
 
-        calendar.add(Calendar.DAY_OF_WEEK, 7)
-        var second_day:Calendar = calendar
-        var second_day_string:String = monthdate.format(second_day.getTime())
+            calendar.add(Calendar.DAY_OF_WEEK, 7)
+            var second_day:Calendar = calendar
+            var second_day_string:String = monthdate.format(second_day.getTime())
 
 
 
-        var text:String = ""
-        if(!first_day.after(curr_date) && !second_day.after(curr_date)){
-            // both days are before todays date
-            text = "You can take the test as soon as today $curr_date_string for best accuracy!"
+            var text:String = ""
+            if(!first_day.after(curr_date) && !second_day.after(curr_date)){
+                // both days are before todays date
+                text = "You can take the test as soon as today $curr_date_string for best accuracy!"
 
 
-        } else if (first_day.before(curr_date) && second_day.after(curr_date)){
-            // the second day is after todays date and the first is before
-            text ="You can take the test as soon as today $curr_date_string, " +
-                    "however for best results you should " +
-                    "take it again 7 days after your missed period on $second_day_string"
+            } else if (first_day.before(curr_date) && second_day.after(curr_date)){
+                // the second day is after todays date and the first is before
+                text ="You can take the test as soon as today $curr_date_string, " +
+                        "however for best results you should " +
+                        "take it again 7 days after your missed period on $second_day_string"
 
+            } else {
+                // neither are after todays date
+                text = "You can take the test on $first_day_string, for " +
+                        "the best accuracy you should take it again" +
+                        " 7 days after your missed period on $second_day_string"
 
+            }
+
+            tv.text = text
         } else {
-            // neither are after todays date
+            calendar.add(Calendar.DAY_OF_WEEK, 21)
+            var twentyone_day:Calendar = calendar.clone() as Calendar
+            var twentyone_day_string:String = monthdate.format(twentyone_day.getTime())
 
-            text = "You can take the test on $first_day_string, for " +
-                    "the best accuracy you should take it again" +
-                    " 7 days after your missed period on $second_day_string"
+            var text:String = ""
+
+
+            if(!twentyone_day.after(curr_date)){
+                // before todays date
+                text = "You can take the test as soon as today $curr_date_string for best accuracy!"
+
+            } else {
+                // not before todays date
+                text = "You can take the test on $twentyone_day_string, for " +
+                        "the best accuracy."
+
+            }
+
+
+            tv.text = text
 
         }
 
-        tv.text = text
+
+
 
 
 
