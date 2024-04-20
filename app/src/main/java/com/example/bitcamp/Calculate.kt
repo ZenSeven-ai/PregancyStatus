@@ -1,14 +1,18 @@
 package com.example.bitcamp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Date
 
 class Calculate: AppCompatActivity() {
 
-
+    private lateinit var home:Button
+    private lateinit var tv:TextView
     private var day_choose:Int = 0
     private var month_choose:Int = 0
     private var year_choose:Int = 0
@@ -17,6 +21,14 @@ class Calculate: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calculate)
+
+        home = findViewById(R.id.home)
+        tv = findViewById(R.id.results)
+        home.setOnClickListener {
+            var intent: Intent = Intent(this, MainActivity::class.java)
+            this.startActivity(intent)
+        }
+
 
         day_choose = intent.getIntExtra("Day", 0)
         month_choose = intent.getIntExtra("Month", 0)
@@ -28,30 +40,45 @@ class Calculate: AppCompatActivity() {
         calendar.set(Calendar.MONTH, month_choose)
         calendar.set(Calendar.YEAR, year_choose)
 
+
+        val monthdate = SimpleDateFormat("MMM dd, yyyy")
+        var curr_date_string:String = monthdate.format(curr_date.getTime())
+
         calendar.add(Calendar.DAY_OF_WEEK, 1)
-        var first_day:Calendar = calendar
+        var first_day:Calendar = calendar.clone() as Calendar
+        var first_day_string:String = monthdate.format(first_day.getTime())
+
+
+
         calendar.add(Calendar.DAY_OF_WEEK, 7)
         var second_day:Calendar = calendar
+        var second_day_string:String = monthdate.format(second_day.getTime())
 
 
 
+        var text:String = ""
         if(!first_day.after(curr_date) && !second_day.after(curr_date)){
-            // both days are after todays date
-            Log.w("CMSC", "You can take the test as soon as today$curr_date for best accuracy!")
+            // both days are before todays date
+            text = "You can take the test as soon as today $curr_date_string for best accuracy!"
 
 
         } else if (first_day.before(curr_date) && second_day.after(curr_date)){
-            // the second day is after todays date
-            Log.w("CMSC", "You can take the test as soon as today ${curr_date.toString()}, however for best results you should " +
-                    "take it again 7 days after your missed period on ${second_day.toString()}")
+            // the second day is after todays date and the first is before
+            text ="You can take the test as soon as today $curr_date_string, " +
+                    "however for best results you should " +
+                    "take it again 7 days after your missed period on $second_day_string"
 
 
         } else {
             // neither are after todays date
-            Log.w("CMSC", "You can take the test on ${curr_date.toString()}, for the best accuracy you should take it again" +
-                    "7 days after your missed period on ${second_day.toString()}")
+
+            text = "You can take the test on $first_day_string, for " +
+                    "the best accuracy you should take it again" +
+                    " 7 days after your missed period on $second_day_string"
 
         }
+
+        tv.text = text
 
 
 
