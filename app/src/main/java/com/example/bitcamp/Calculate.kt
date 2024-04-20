@@ -22,6 +22,8 @@ class Calculate: AppCompatActivity() {
 
     private lateinit var home:Button
     private lateinit var tv:TextView
+    private lateinit var tvasap:TextView
+    private lateinit var tvaccur:TextView
     private var day_choose:Int = 0
     private var month_choose:Int = 0
     private var year_choose:Int = 0
@@ -33,6 +35,10 @@ class Calculate: AppCompatActivity() {
 
         home = findViewById(R.id.home)
         tv = findViewById(R.id.results)
+        tvasap = findViewById(R.id.tvasap)
+        tvaccur = findViewById(R.id.tvaccurate)
+
+
         home.setOnClickListener {
             var intent: Intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
@@ -72,25 +78,31 @@ class Calculate: AppCompatActivity() {
             var text:String = ""
             if(first_day.before(curr_date) && second_day.before(curr_date)){
 
-                // both days are before todays date
-                text = "You can take the test as soon as today $curr_date_string for best accuracy!"
+
+                tvasap.text = curr_date_string
+                tvaccur.text = curr_date_string
 
 
             } else if (first_day.before(curr_date) && second_day.after(curr_date)){
                 // the second day is after todays date and the first is before
-                text ="You can take the test as soon as today $curr_date_string, " +
-                        "however for best results you should " +
-                        "take it again 7 days after your missed period on $second_day_string"
+
+
+                tvasap.text = curr_date_string
+                tvaccur.text = second_day_string
+
+
 
             } else {
                 // neither are after todays date
-                text = "You can take the test on $first_day_string, for " +
-                        "the best accuracy you should take it again" +
-                        " 7 days after your missed period on $second_day_string"
+
+
+                tvasap.text = first_day_string
+                tvaccur.text = second_day_string
+
+
 
             }
 
-            tv.text = text
         } else {
 
             calendar.add(Calendar.DAY_OF_WEEK, 21)
@@ -105,19 +117,24 @@ class Calculate: AppCompatActivity() {
                 // before todays date
 
 
-                text = "You can take the test as soon as \ntoday $curr_date_string for the best accuracy!"
+                tvasap.text = curr_date_string
+                tvaccur.text = curr_date_string
+
 
 
             } else {
+
+
+                tvasap.text = twentyone_day_string
+                tvaccur.text = twentyone_day_string
+
                 // not before todays date
-                text = "You can take the test on \n $twentyone_day_string, for the best accuracy."
 
 
 
 
             }
 
-            tv.text = text
 
         }
 
