@@ -54,7 +54,7 @@ class DayMissed : AppCompatActivity() {
             datePickerDialog.show()
 
             // set the max date as the current day
-            c.set(maxYear, maxMonth-1, maxDay)
+            c.set(maxYear, maxMonth, maxDay)
             datePickerDialog.datePicker.maxDate = c.timeInMillis
 
 

@@ -38,12 +38,14 @@ class Calculate: AppCompatActivity() {
 
         var calendar:Calendar = Calendar.getInstance()
         val curr_date:Calendar = Calendar.getInstance()
+
         calendar.set(Calendar.DAY_OF_MONTH, day_choose)
         calendar.set(Calendar.MONTH, month_choose)
         calendar.set(Calendar.YEAR, year_choose)
 
         val monthdate = SimpleDateFormat("MMM dd, yyyy")
         var curr_date_string:String = monthdate.format(curr_date.getTime())
+
 
         if(intent.getStringExtra("Situation").equals("MissedPeriod")){
 
@@ -60,8 +62,10 @@ class Calculate: AppCompatActivity() {
 
 
 
+
             var text:String = ""
-            if(!first_day.after(curr_date) && !second_day.after(curr_date)){
+            if(first_day.before(curr_date) && second_day.before(curr_date)){
+
                 // both days are before todays date
                 text = "You can take the test as soon as today $curr_date_string for best accuracy!"
 
