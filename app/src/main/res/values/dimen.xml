@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_title">34dp</dimen>
+    <dimen name="title_1">28dp</dimen>
+    <dimen name="title_2">22dp</dimen>
+    <dimen name="title_3">20dp</dimen>
+    <dimen name="body">17dp</dimen>
+    <dimen name="footnote">13dp</dimen>
+
+</resources>
