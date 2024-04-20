@@ -33,8 +33,8 @@ import java.io.ObjectInput
 
 class ResourceMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener{
     private lateinit var map : GoogleMap
-    private lateinit var target: Marker
-    private lateinit var sephora: Marker
+    private lateinit var health: Marker
+    private lateinit var help: Marker
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private var lat : Double = 0.0
     private var long : Double = 0.0
@@ -69,7 +69,7 @@ class ResourceMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
         options.strokeColor(Color.RED)
         map.addCircle(options)
         builder.include(latLng)
-        target = map.addMarker(MarkerOptions().position(latLng).title("UMD Health Center"))!!
+        health = map.addMarker(MarkerOptions().position(latLng).title("UMD Health Center"))!!
 
         val latLng2 = LatLng(38.98316814959617, -76.94369150379234)
         val options2: CircleOptions = CircleOptions()
@@ -78,8 +78,29 @@ class ResourceMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
         options2.strokeWidth(5.0f)
         options2.strokeColor(Color.RED)
         map.addCircle(options2)
-        sephora = map.addMarker(MarkerOptions().position(latLng2).title("UMD Help Center"))!!
+        help = map.addMarker(MarkerOptions().position(latLng2).title("UMD Help Center"))!!
         builder.include(latLng2)
+
+        val latLng3 = LatLng(38.998238, -76.914052)
+        val options3: CircleOptions = CircleOptions()
+        options3.center(latLng3)
+        options3.radius(10.0)
+        options3.strokeWidth(5.0f)
+        options3.strokeColor(Color.RED)
+        map.addCircle(options3)
+        builder.include(latLng3)
+        health = map.addMarker(MarkerOptions().position(latLng).title("CVS"))!!
+
+
+        val latLng4 = LatLng(38.906721, -77.000495)
+        val options4: CircleOptions = CircleOptions()
+        options4.center(latLng4)
+        options4.radius(10.0)
+        options4.strokeWidth(5.0f)
+        options4.strokeColor(Color.RED)
+        map.addCircle(options4)
+        builder.include(latLng4)
+        health = map.addMarker(MarkerOptions().position(latLng).title("Planned Parenthood"))!!
 
         val bounds = builder.build()
         var camera : CameraUpdate = CameraUpdateFactory.newLatLngBounds( bounds, 100)
@@ -114,10 +135,10 @@ class ResourceMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
 
         var sephora_message: AlertDialog = build.create()
 
-        if(marker.id == target.id){
+        if(marker.id == health.id){
             Log.w("Marker","Target was pressed")
             target_message.show()
-        } else if(marker.id == sephora.id) {
+        } else if(marker.id == help.id) {
             Log.w("Marker", "Sephora was pressed")
             sephora_message.show()
         }
