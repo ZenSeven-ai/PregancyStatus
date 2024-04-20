@@ -53,7 +53,7 @@
 
     <FrameLayout
         android:id="@+id/maps_linear"
-        android:layout_width="wrap_content"
+        android:layout_width="550dp"
         android:layout_height="550dp"
         android:layout_centerHorizontal="true"
         android:orientation="vertical"
