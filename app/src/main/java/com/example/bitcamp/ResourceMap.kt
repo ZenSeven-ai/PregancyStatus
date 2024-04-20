@@ -1,10 +1,8 @@
 package com.example.bitcamp
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdate
@@ -18,7 +16,7 @@ import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
-class ResoureMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener{
+class ResourceMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener{
     private lateinit var map : GoogleMap
     private lateinit var target: Marker
     private lateinit var sephora: Marker
@@ -33,11 +31,7 @@ class ResoureMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWind
             supportFragmentManager.findFragmentById( R.id.map_fragment ) as SupportMapFragment
         fragment.getMapAsync( this )
 
-
-
     }
-
-
 
     override fun onMapReady(p0: GoogleMap) {
 
@@ -46,7 +40,7 @@ class ResoureMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWind
 
 
         val builder = LatLngBounds.Builder()
-            var latLng = LatLng(38.998760,-76.906640)
+            var latLng = LatLng(38.987320,-76.944656)
             var options : CircleOptions = CircleOptions( )
             options.center( latLng )
             options.radius( 100.0 )
@@ -54,19 +48,19 @@ class ResoureMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWind
             options.strokeColor( Color.RED )
             map.addCircle( options )
             builder.include(latLng)
-            target = map.addMarker( MarkerOptions( ).position( latLng ).title( "Target") )!!
+            target = map.addMarker( MarkerOptions( ).position( latLng ).title( "UMD Health Center") )!!
 
 
 
 
-            var latLng2 = LatLng(38.913090,-77.031560)
+            var latLng2 = LatLng(38.987530,-76.941370)
             var options2 : CircleOptions = CircleOptions( )
             options2.center( latLng2 )
             options2.radius( 100.0 )
             options2.strokeWidth( 10.0f )
             options2.strokeColor( Color.RED )
             map.addCircle( options2 )
-            sephora = map.addMarker( MarkerOptions( ).position( latLng2 ).title( "Sephora") )!!
+            sephora = map.addMarker( MarkerOptions( ).position( latLng2 ).title( "UMD Help Center") )!!
             builder.include(latLng2)
 
 
