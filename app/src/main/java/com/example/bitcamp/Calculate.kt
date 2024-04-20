@@ -111,16 +111,5 @@ class Calculate: AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     }
 }

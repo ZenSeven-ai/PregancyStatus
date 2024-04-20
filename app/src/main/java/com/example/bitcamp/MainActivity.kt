@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         resources.setOnClickListener {
-            var intent: Intent = Intent(this, ResourceMap::class.java)
+            var intent: Intent = Intent(this, Resources::class.java)
             this.startActivity(intent)
 
         }
