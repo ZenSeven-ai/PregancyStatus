@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--We are going to use Constraintlayout-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/cream"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Education">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"/>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click On A Popular\n Contraceptive Method to Learn More!"
+        android:fontFamily="@font/quattrocentobold"
+        android:textSize="25dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"/>
+
+
+
+    <!--Add a textView for front part of the card-->
+    <TextView
+        android:id="@+id/card_back_1"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Back Card"
+        android:textSize="22sp"
+        android:background="@drawable/custom_button_selected"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/card_front_2"
+        />
+
+
+    <!--Add a textview for back part of the card-->
+    <TextView
+        android:id="@+id/card_front_1"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Male Condom"
+        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:background="@drawable/custom_button_unselected"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/card_front_2" />
+
+
+    <!--Add a textView for front part of the card-->
+    <TextView
+        android:id="@+id/card_back_2"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Back Card"
+        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:background="@drawable/custom_button_selected"
+        app:layout_constraintTop_toBottomOf="@id/card_front_1"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/card_back_3"
+        />
+
+
+    <!--Add a textview for back part of the card-->
+    <TextView
+        android:id="@+id/card_front_2"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Birth Control Pills"
+        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:background="@drawable/custom_button_unselected"
+        app:layout_constraintTop_toBottomOf="@id/card_front_1"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/card_back_3" />
+
+
+
+    <!--Add a textView for front part of the card-->
+    <TextView
+        android:id="@+id/card_back_3"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Back Card"
+        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:background="@drawable/custom_button_selected"
+        app:layout_constraintTop_toBottomOf="@id/card_front_2"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/card_front_4"
+        />
+
+
+    <!--Add a textview for back part of the card-->
+    <TextView
+        android:id="@+id/card_front_3"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Implants and Injections"
+        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:background="@drawable/custom_button_unselected"
+        app:layout_constraintTop_toBottomOf="@id/card_front_2"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/card_front_4" />
+
+
+    <!--Add a textView for front part of the card-->
+    <TextView
+        android:id="@+id/card_back_4"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Back Card"
+        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:background="@drawable/custom_button_selected"
+        app:layout_constraintTop_toBottomOf="@id/card_front_3"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        />
+
+
+    <!--Add a textview for back part of the card-->
+    <TextView
+        android:id="@+id/card_front_4"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Withdrawal"
+        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:background="@drawable/custom_button_unselected"
+        app:layout_constraintTop_toBottomOf="@id/card_back_3"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_button"
+        android:fontFamily="@font/mulishbold"
+        android:text="Go Back Home"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/guideline_bottom"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

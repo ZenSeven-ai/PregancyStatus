@@ -41,8 +41,6 @@
         app:layout_constraintGuide_percent="0.7"/>
 
 
-
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/education"
         android:layout_width="0dp"
