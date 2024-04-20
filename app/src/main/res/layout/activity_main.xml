@@ -7,16 +7,16 @@
     android:background="@color/cream"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <ImageView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Am I Pregnant?"
-        android:fontFamily="@font/quattrocentobold"
-        android:textSize="45dp"
-        app:layout_constraintEnd_toEndOf="@id/guideline_right"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+        android:layout_width="350dp"
+        android:layout_height="280dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintBottom_toTopOf="@id/body_1"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.1"/>
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6"/>
+        app:layout_constraintGuide_percent="0.63"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
@@ -59,9 +59,9 @@
         android:id="@+id/body_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you worried that you may be \n pregnant and don't know when to \n take the pregnancy test?"
+        android:text="Confused about when to take a \npregnancy test?"
         android:fontFamily="@font/mulishregular"
-        android:textSize="@dimen/title_3"
+        android:textSize="@dimen/body"
         android:gravity="center"
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:text="Use this tool to find out when \nto get the most accurate results!"
         android:fontFamily="@font/mulishregular"
-        android:textSize="@dimen/title_3"
+        android:textSize="@dimen/body"
         android:gravity="center"
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
@@ -92,8 +92,8 @@
 
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/body_2"
-        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
+        app:layout_constraintTop_toBottomOf="@id/guideline_half"
+        app:layout_constraintBottom_toTopOf="@id/resources"/>
 
 
     <androidx.appcompat.widget.AppCompatButton

@@ -52,7 +52,7 @@ class DontKnowPeriod:AppCompatActivity() {
             )
 
             datePickerDialog.show()
-            c.set(maxYear, maxMonth-1, maxDay)
+            c.set(maxYear, maxMonth, maxDay)
             datePickerDialog.datePicker.maxDate = c.timeInMillis
 
 

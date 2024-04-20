@@ -86,14 +86,17 @@ class Calculate: AppCompatActivity() {
 
             tv.text = text
         } else {
+
             calendar.add(Calendar.DAY_OF_WEEK, 21)
             var twentyone_day:Calendar = calendar.clone() as Calendar
             var twentyone_day_string:String = monthdate.format(twentyone_day.getTime())
 
             var text:String = ""
 
+            Log.w("here", "twennty one $twentyone_day_string")
 
-            if(!twentyone_day.after(curr_date)){
+
+            if(twentyone_day.before(curr_date)){
                 // before todays date
                 text = "You can take the test as soon as today $curr_date_string for best accuracy!"
 

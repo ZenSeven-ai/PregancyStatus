@@ -56,12 +56,15 @@
     <!--Add a textView for front part of the card-->
     <TextView
         android:id="@+id/card_back_1"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="Back Card"
-        android:textSize="22sp"
+        android:fontFamily="@font/mulishbold"
+        android:textColor="@color/white"
+        android:text="Thin barriers worn during sex to reduce the possibilty for pregnancy and spread of STDs.
+\nPerfect use: 98% effective\n  Normal Use: 87% effective"
+        android:textSize="18dp"
         android:background="@drawable/custom_button_selected"
         app:layout_constraintTop_toBottomOf="@id/guideline_top"
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
@@ -73,7 +76,7 @@
     <!--Add a textview for back part of the card-->
     <TextView
         android:id="@+id/card_front_1"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
@@ -90,12 +93,14 @@
     <!--Add a textView for front part of the card-->
     <TextView
         android:id="@+id/card_back_2"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="Back Card"
-        android:textSize="22sp"
+        android:text="Medicine that is taken everyday to stop ovulation and reduce chances of getting pregnant.\n
+ Perfect use: 99% effective\n  Normal Use: 93% effective"
+        android:textSize="18dp"
+        android:textColor="@color/white"
         android:fontFamily="@font/mulishbold"
         android:background="@drawable/custom_button_selected"
         app:layout_constraintTop_toBottomOf="@id/card_front_1"
@@ -108,12 +113,12 @@
     <!--Add a textview for back part of the card-->
     <TextView
         android:id="@+id/card_front_2"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
         android:text="Birth Control Pills"
-        android:textSize="22sp"
+        android:textSize="22dp"
         android:fontFamily="@font/mulishbold"
         android:background="@drawable/custom_button_unselected"
         app:layout_constraintTop_toBottomOf="@id/card_front_1"
@@ -126,12 +131,14 @@
     <!--Add a textView for front part of the card-->
     <TextView
         android:id="@+id/card_back_3"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="Back Card"
-        android:textSize="22sp"
+        android:text="Long-acting, reversible contraception.
+    \nPerfect use: 98% effective\n  Normal Use: 87% effective"
+        android:textSize="18dp"
+        android:textColor="@color/white"
         android:fontFamily="@font/mulishbold"
         android:background="@drawable/custom_button_selected"
         app:layout_constraintTop_toBottomOf="@id/card_front_2"
@@ -144,11 +151,12 @@
     <!--Add a textview for back part of the card-->
     <TextView
         android:id="@+id/card_front_3"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="Implants and Injections"
+        android:visibility="invisible"
+        android:text="IUD"
         android:textSize="22sp"
         android:fontFamily="@font/mulishbold"
         android:background="@drawable/custom_button_unselected"
@@ -161,7 +169,7 @@
     <!--Add a textView for front part of the card-->
     <TextView
         android:id="@+id/card_back_4"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
@@ -179,7 +187,7 @@
     <!--Add a textview for back part of the card-->
     <TextView
         android:id="@+id/card_front_4"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:textAlignment="center"
         android:gravity="center"
