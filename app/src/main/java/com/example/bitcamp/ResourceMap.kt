@@ -40,11 +40,11 @@ class ResourceMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
 
 
         val builder = LatLngBounds.Builder()
-            var latLng = LatLng(38.987320,-76.944656)
+            var latLng = LatLng(38.987169759522544,-76.9446136468915)
             var options : CircleOptions = CircleOptions( )
             options.center( latLng )
-            options.radius( 100.0 )
-            options.strokeWidth( 10.0f )
+            options.radius( 10.0 )
+            options.strokeWidth( 5.0f )
             options.strokeColor( Color.RED )
             map.addCircle( options )
             builder.include(latLng)
@@ -53,11 +53,11 @@ class ResourceMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
 
 
 
-            var latLng2 = LatLng(38.987530,-76.941370)
+            var latLng2 = LatLng(38.98316814959617,-76.94369150379234)
             var options2 : CircleOptions = CircleOptions( )
             options2.center( latLng2 )
-            options2.radius( 100.0 )
-            options2.strokeWidth( 10.0f )
+            options2.radius( 10.0 )
+            options2.strokeWidth( 5.0f )
             options2.strokeColor( Color.RED )
             map.addCircle( options2 )
             sephora = map.addMarker( MarkerOptions( ).position( latLng2 ).title( "UMD Help Center") )!!
