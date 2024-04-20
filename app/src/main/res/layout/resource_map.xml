@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream"
-    tools:context=".DayMissed">
+    tools:context=".ResoureMap">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select the day you were expeting your period"
+        android:text="Sexual Health Resources \nat UMD"
         android:gravity="center"
         android:fontFamily="@font/quattrocentobold"
         android:textSize="@dimen/title_1"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintBottom_toTopOf="@id/maps_linear" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
@@ -38,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3"/>
+        app:layout_constraintGuide_percent="0.1"/>
 
 
 
@@ -47,42 +48,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7"/>
+        app:layout_constraintGuide_percent="0.9"/>
 
 
-
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/select_date"
-        android:layout_width="0dp"
+    <FrameLayout
+        android:id="@+id/maps_linear"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/mulishbold"
-        android:text="Click Here to Select Date"
-        android:textColor="@color/dark_purple"
-        android:textSize="@dimen/body"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
 
-        app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
+        >
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/calculate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/mulishbold"
-        android:text="Calculate Your Results"
-        android:textColor="@color/dark_purple"
-        android:textSize="@dimen/body"
+        <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-        app:layout_constraintLeft_toRightOf="@id/guideline_left"
-        app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/select_date"
-        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
+            tools:context=".MapsActivity"></fragment>
 
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+
+// DO YOU KNOW WHEN YOUR PERIOD IS DUE?
 class KnowPeriod:AppCompatActivity() {
 
     private lateinit var yes: Button

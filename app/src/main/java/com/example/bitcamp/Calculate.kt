@@ -9,7 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
+
+// CALCULATES DAY TO TAKE TEST
 class Calculate: AppCompatActivity() {
+
 
     private lateinit var home:Button
     private lateinit var tv:TextView

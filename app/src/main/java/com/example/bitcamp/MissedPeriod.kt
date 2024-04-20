@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+
+// HAVE YOU MISSED YOUR PERIOD
 class MissedPeriod : AppCompatActivity() {
 
     private lateinit var yes:Button

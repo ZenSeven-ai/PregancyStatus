@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+
+// YOU DID NOT MISS YOUR PERIOD
 class NotMissPeriod:AppCompatActivity() {
 
     private lateinit var home:Button

@@ -8,6 +8,8 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Calendar
 
+
+// SELECT DATE FOR UNPROTECTED SEX
 class DontKnowPeriod:AppCompatActivity() {
 
     private lateinit var date: Button
@@ -41,7 +43,7 @@ class DontKnowPeriod:AppCompatActivity() {
                     month_choose = month
                     year_choose = year
 
-                    Log.w("CMSC", "$day_choose $month_choose $year_choose")
+
 
                 },
                 year,
