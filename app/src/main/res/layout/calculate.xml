@@ -11,13 +11,27 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select the day you were expeting your period"
+        android:text="Results"
         android:gravity="center"
         android:fontFamily="@font/quattrocentobold"
         android:textSize="@dimen/title_1"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:gravity="center"
+        android:fontFamily="@font/mulish_wght"
+        android:textSize="@dimen/title_1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintBottom_toTopOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
@@ -54,12 +68,12 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/select_date"
+        android:id="@+id/home"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/mulishbold"
-        android:text="Click Here to Select Date"
+        android:text="Go to Home Page"
         android:textColor="@color/dark_purple"
         android:textSize="@dimen/body"
 
@@ -68,20 +82,7 @@
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/calculate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/mulishbold"
-        android:text="Calculate Your Results"
-        android:textColor="@color/dark_purple"
-        android:textSize="@dimen/body"
 
-        app:layout_constraintLeft_toRightOf="@id/guideline_left"
-        app:layout_constraintRight_toLeftOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@id/select_date"
-        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"/>
 
 
 

@@ -1,6 +1,7 @@
 package com.example.bitcamp
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -10,6 +11,7 @@ import java.util.Calendar
 
 class DayMissed : AppCompatActivity() {
     private lateinit var date:Button
+    private lateinit var calculate: Button
     private var day_choose:Int = 0
     private var month_choose:Int = 0
     private var year_choose:Int = 0
@@ -18,6 +20,7 @@ class DayMissed : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.day_missed)
         date = findViewById(R.id.select_date)
+        calculate = findViewById(R.id.calculate)
 
         date.setOnClickListener {
             val c = Calendar.getInstance()
@@ -45,5 +48,25 @@ class DayMissed : AppCompatActivity() {
 
 
         }
+
+
+        calculate.setOnClickListener {
+            // make sure they actually select something to go to the next activity
+            if(year_choose!=0){
+                var intent: Intent = Intent(this, Calculate::class.java)
+                intent.putExtra("Month", month_choose)
+                intent.putExtra("Year", year_choose)
+                intent.putExtra("Day", day_choose)
+
+                intent.putExtra("Situation", "MissedPeriod")
+                this.startActivity(intent)
+
+            }
+
+
+
+        }
+
+
     }
 }
