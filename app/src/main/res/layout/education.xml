@@ -218,7 +218,7 @@
                     android:layout_height="120dp"
                     android:textAlignment="center"
                     android:gravity="center"
-                    android:text="Tiny rod placed in arm that releases hormones to prevent pregnancy.\nPerfect use: 99% effective\n  Normal Use: 99% effective"
+                    android:text="A hormonal injection given once every 3 months to prevent ovulation.\nPerfect use: 99% effective\n  Normal Use: 94% effective"
                     android:textSize="18dp"
                     android:fontFamily="@font/mulishbold"
                     android:textColor="@color/white"
@@ -233,11 +233,44 @@
                     android:textAlignment="center"
                     android:gravity="center"
 
+                    android:text="Injection"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/mulishbold"
+                    android:background="@drawable/custom_button_unselected" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/card_back_6"
+                    android:layout_width="350dp"
+                    android:layout_height="120dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:text="A method to pull out before sperm enters a woman's body (Note: this is a very ineffictive method).\nPerfect use: 96% effective\n  Normal Use: 78% effective"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/mulishbold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/custom_button_selected"
+                    />
+
+                <!--Add a textview for back part of the card-->
+                <TextView
+                    android:id="@+id/card_front_6"
+                    android:layout_width="350dp"
+                    android:layout_height="120dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+
                     android:text="Withdrawal"
                     android:textSize="22sp"
                     android:fontFamily="@font/mulishbold"
                     android:background="@drawable/custom_button_unselected" />
             </RelativeLayout>
+
 
 
 

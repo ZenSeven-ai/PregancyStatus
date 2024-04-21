@@ -21,7 +21,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Do you know when your period is due?"
+        android:text="Do you know when your menstrual cycle(period) \nis due?"
         android:gravity="center"
         android:fontFamily="@font/quattrocentobold"
         android:textSize="@dimen/title_1"

@@ -17,6 +17,8 @@ class Education : AppCompatActivity() {
     var isFront2 =true
     var isFront3 =true
     var isFront4 =true
+    var isFront5 = true
+    var isFront6 = true
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,11 +43,17 @@ class Education : AppCompatActivity() {
         val back4 =findViewById<TextView>(R.id.card_back_4) as TextView
 
 
+        val front5 = findViewById<TextView>(R.id.card_front_5) as TextView
+        val back5 =findViewById<TextView>(R.id.card_back_5) as TextView
 
 
-        var listfront = listOf(front1, front2, front3, front4)
-        var listback = listOf(back1, back2, back3, back4)
-        var isFront = mutableListOf(isFront1, isFront2, isFront3, isFront4)
+        val front6 = findViewById<TextView>(R.id.card_front_6) as TextView
+        val back6 =findViewById<TextView>(R.id.card_back_6) as TextView
+
+
+        var listfront = listOf(front1, front2, front3, front4, front5, front6)
+        var listback = listOf(back1, back2, back3, back4, back5, back6)
+        var isFront = mutableListOf(isFront1, isFront2, isFront3, isFront4, isFront5, isFront6)
 
         // Now we will set the front animation
         front_anim = AnimatorInflater.loadAnimator(applicationContext, R.animator.front_animator) as AnimatorSet
@@ -61,7 +69,7 @@ class Education : AppCompatActivity() {
 
 
 
-        for(i in 0..3){
+        for(i in 0..5){
             listfront[i].cameraDistance = 8000 * scale
             listback[i].cameraDistance = 8000 * scale
 

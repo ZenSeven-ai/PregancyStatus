@@ -27,7 +27,7 @@
 
         android:gravity="center"
         android:fontFamily="@font/mulishbold"
-        android:textSize="@dimen/title_3"
+        android:textSize="@dimen/title_2"
         app:layout_constraintRight_toLeftOf="@id/guideline_right"
         app:layout_constraintLeft_toRightOf="@id/guideline_left"
         app:layout_constraintBottom_toTopOf="@id/results_2"
@@ -37,7 +37,7 @@
         android:id="@+id/results_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="\n\nTaking it early in your cycle may \nresult to inaccurate results"
+        android:text="\nTaking it early in your cycle may \nresult to inaccurate results"
         android:gravity="center"
         android:fontFamily="@font/mulishbold"
         android:textSize="@dimen/title_2"
