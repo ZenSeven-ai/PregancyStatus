@@ -11,7 +11,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="When should I take the test..."
+        android:text="When can I take the test..."
         android:gravity="center"
         android:fontFamily="@font/quattrocentobold"
         android:textSize="@dimen/title_1"

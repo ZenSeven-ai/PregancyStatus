@@ -41,6 +41,8 @@ class Education : AppCompatActivity() {
         val back4 =findViewById<TextView>(R.id.card_back_4) as TextView
 
 
+
+
         var listfront = listOf(front1, front2, front3, front4)
         var listback = listOf(back1, back2, back3, back4)
         var isFront = mutableListOf(isFront1, isFront2, isFront3, isFront4)
